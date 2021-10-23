@@ -14,7 +14,7 @@ class VideoModel(db.Model):
 
 	def __repr__(self):
 		return f"Video(name = {name}, views = {views}, likes = {likes})"
-db.create_all()
+#db.create_all()
 
 video_put_args = reqparse.RequestParser()
 video_put_args.add_argument("name", type=str, help="Name of the video is required", required=True)
