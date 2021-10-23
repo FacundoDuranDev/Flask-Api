@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 api = Api(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://rldsskhecqpcjc:14e489294858d24c4d21f4be3ea0cb055fe4ec9ccbc5dcbf3359083af5d7b8d0@ec2-54-159-176-167.compute-1.amazonaws.com:5432/d8ipfmia6hgtoa'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://grnpyenltqykys:d5363b559a080f23abbe283c88068516f42e034672676765f25b26feedd6cabc@ec2-52-3-79-87.compute-1.amazonaws.com:5432/d86ddnu46b5d77'
 db = SQLAlchemy(app)
 class VideoModel(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
@@ -14,6 +14,7 @@ class VideoModel(db.Model):
 
 	def __repr__(self):
 		return f"Video(name = {name}, views = {views}, likes = {likes})"
+
 db.create_all()
 
 video_put_args = reqparse.RequestParser()
